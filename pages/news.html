@@ -1,0 +1,36 @@
+<div class="page" data-name="news">
+  <div class="navbar">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+      </div>
+      <div class="title">Tin tức</div>
+    </div>
+  </div>
+  <div class="page-content">
+    <div class="block-title">Bài viết</div>
+    <div class="block">
+      {{#each data_news}}
+      <div class="card demo-card-header-pic">
+        <div style="background-image:url({{anhDaiDien}})"
+          class="card-header align-items-flex-end">{{title}}</div>
+        <div class="card-content card-content-padding">
+          <p class="date">{{publishDate}}</p>
+          <p>{{moTaNgan}}</p>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="link">Like</a>
+          <a href="/pages/news-detail/{{id}}/" class="link">Read more {{id}}</a>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+
+  </div>
+</div>
+<script>
+
+</script>

@@ -133,3 +133,17 @@ function getUserInfo() {
     return false;
   }
 }
+
+function getNews(){
+  axios.get('/BaiViets', {
+    params: {
+      trangThai: PUBLISHED
+    }
+  })
+  .then(function (response) {
+    console.log('get news', response);
+  })
+  .catch(function (error) {
+    console.log('get news', error);
+  });
+}

@@ -1,0 +1,30 @@
+<div class="page" data-name="news">
+  <div class="navbar">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+      </div>
+      <div class="title">{{news_detail.title}}</div>
+    </div>
+  </div>
+  <div class="page-content">
+    <div class="block-title">{{news_detail.title}}</div>
+    <div class="block block-strong">
+      <img src="{{news_detail.anhDaiDien}}" alt="" style="width:90vw; height:40vh">
+      <p>{{news_detail.para_first}}</p>
+      <p>{{news_detail.para_second}}</p>
+    </div>
+
+  </div>
+</div>
+<script>
+    return {
+      data: function () {
+        console.log('news detail 12');
+      }
+    }
+
+</script>
