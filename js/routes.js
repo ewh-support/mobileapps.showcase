@@ -72,7 +72,10 @@ routes = [{
     path: '/progessbar/',
     componentUrl: './pages/progessbar.html',
   },
-  
+   {
+    path: '/photoBrowers/',
+    componentUrl: './pages/photoBrowers.html',
+  },
     {
     name:'cards',
     path:'/cards/',
