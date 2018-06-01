@@ -6,6 +6,10 @@ routes = [{
     path: '/about/',
     url: './pages/about.html'
   },
+    {
+    path: '/chip-tags/',
+    url: './pages/chip-tags.html'
+  },
   {
     path: '/formInput/',
     url: './pages/formInput.html'
