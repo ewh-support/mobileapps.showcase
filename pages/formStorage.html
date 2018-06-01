@@ -1,0 +1,77 @@
+<template>
+<div class="page" data-name="formStorage">
+    <div class="navbar">
+        <div class="navbar-inner sliding">
+            <div class="left">
+                <a href="#" class="link back">
+                    <i class="icon icon-back"></i>
+                    <span class="ios-only">Back</span>
+                </a>
+            </div>
+            <div class="title">form Storage</div>
+        </div>
+    </div>
+    <div class="page-content">
+        <form class="list form-store-data" id="my-form">
+            <ul>
+                <li>
+                    <div class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">Name</div>
+                            <div class="item-input-wrap">
+                                <input type="text" name="name" placeholder="Your name">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">E-mail</div>
+                            <div class="item-input-wrap">
+                                <input type="email" name="email" placeholder="E-mail">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">Ignore from storage</div>
+                            <div class="item-input-wrap">
+                                <input class="no-store-data" type="text" name="text" placeholder="This value won't be stored">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">Gender</div>
+                            <div class="item-input-wrap">
+                                <select name="gender">
+                                    <option value="male" selected>Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">Switch</div>
+                            <div class="item-after">
+                                <label class="toggle">
+                                    <input type="checkbox" name="switch" value="yes">
+                                    <i class="toggle-icon"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>
+</template>

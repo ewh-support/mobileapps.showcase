@@ -7,6 +7,133 @@ routes = [{
     url: './pages/about.html'
   },
   {
+    path: '/formInput/',
+    url: './pages/formInput.html'
+  },
+  {
+  path: '/data-table/',
+    url: './pages/data-table.html'
+  },
+  {
+    name:'radio-button',
+    path:'/radio-button/',
+    url:'./pages/radio-button.html'
+  },
+   {
+    name:'floattingactionbutton',
+    path:'/floattingactionbutton/',
+    url:'./pages/floattingactionbutton.html'
+  },
+  {
+    name:'checkbox',
+    path:'/checkbox/',
+    url:'./pages/checkbox.html'
+  },
+  {
+    name:'contact-list',
+    path:'/contact-list/',
+    url:'./pages/contact-list.html',
+  },
+  {
+    name:'timeline',
+    path:'/timeline/',
+    url:'./pages/timeline.html',
+  },
+  {
+    name:'calender-timeline',
+    path:'/calender-timeline/',
+    url:'./pages/sub-timeline/calender-timeline.html'
+  },
+  {
+    name:'horizontal-timeline',
+    path:'/horizontal-timeline/',
+    url:'./pages/sub-timeline/horizontal-timeline.html'
+  },
+  {
+    name:'vertical-timeline',
+    path:'/vertical-timeline/',
+    url:'./pages/sub-timeline/vertical-timeline.html'
+  },
+  {
+    path: '/scroll/',
+    componentUrl: './pages/scroll.html',
+  },
+  {
+    name:'chip-tags',
+    path:'/chip-tags/',
+    url:'./pages/chip-tags.html',
+  },
+    {
+    name:'contentBlock',
+    path:'/contentBlock/',
+    url:'./pages/contentBlock.html',
+  },
+ {
+    path: '/progessbar/',
+    componentUrl: './pages/progessbar.html',
+  },
+  
+    {
+    name:'cards',
+    path:'/cards/',
+    url:'./pages/cards.html',
+  },
+    {
+    name:'basic-card',
+    path:'/basic-card/',
+    url:'./pages/sub-card/basic-card.html',
+  },
+    {
+    name:'card-facebook',
+    path:'/card-facebook/',
+    url:'./pages/sub-card/card-facebook.html',
+  },
+    {
+    name:'stylle-card',
+    path:'/stylle-card/',
+    url:'./pages/sub-card/stylle-card.html',
+  },
+      {
+    name:'Badge',
+    path:'/Badge/',
+    url:'./pages/Badge.html',
+  },
+        {
+    name:'fabmod',
+    path:'/fabmod/',
+    url:'./pages/sub-fab/fabmod.html',
+  },
+        {
+    name:'fabcolor',
+    path:'/fabcolor/',
+    url:'./pages/sub-fab/fabcolor.html',
+  },
+        {
+    name:'fabfull',
+    path:'/fabfull/',
+    url:'./pages/sub-fab/fabfull.html',
+  },
+   {
+    path: '/dialog/',
+    componentUrl: './pages/dialog.html',
+  },
+     {
+    path: '/formStorage/',
+    componentUrl: './pages/formStorage.html',
+  },
+    {
+    path: '/preload/',
+    componentUrl: './pages/preload.html',
+  },
+     {
+    path: '/searchbar/',
+    componentUrl: './pages/searchbar.html',
+  },
+       {
+    path: '/formData/',
+    componentUrl: './pages/formData.html',
+  },
+  {
     path: '/map/',
     url: './pages/map.html',
     on: {
@@ -21,14 +148,28 @@ routes = [{
       }
     }
   },
+{
+     path: '/scroll/',
+    componentUrl: './pages/scroll.html',
+  },
   {
-    path: '/catalog/',
+     path: '/canlender/',
+    componentUrl: './pages/canlender.html',
+  },
+  {
+     path: '/catalog/',
     componentUrl: './pages/catalog.html',
+  },
+  {
+    path: '/category/',
+    componentUrl: './pages/category.html',
   },
   {
     path: '/product/:id/',
     componentUrl: './pages/product.html',
   },
+
+  
   {
     path: '/settings/',
     url: './pages/settings.html',
@@ -188,6 +329,43 @@ routes = [{
           // Resolve route to load page
           resolve({
             templateUrl: './pages/news.html',
+          }, {
+            context: {
+              data_news: data, //chỉ cần truyền thông tin ngoài form
+            }
+          });
+        })
+        .catch(function (error) {})
+      // Hide Preloader
+      app.preloader.hide();
+      return true;
+    }
+  },
+  {
+    path: '/suKien/',
+    async: function (routeTo, routeFrom, resolve, reject) {
+      // Router instance
+      var router = this;
+      // App instance
+      var app = router.app;
+      // Show Preloader
+      app.preloader.show();
+
+      console.log('get news()')
+
+      axios.get('http://128.199.153.64:5000/api/BaiViets', {
+          params: {
+            filter: {
+              "trangThai": "PUBLISHED"
+            }
+          }
+        }).then(function (response) {
+          console.log(response.data)
+          var data = response.data;
+
+          // Resolve route to load page
+          resolve({
+            templateUrl: './pages/suKien.html',
           }, {
             context: {
               data_news: data, //chỉ cần truyền thông tin ngoài form
