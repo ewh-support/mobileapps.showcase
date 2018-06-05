@@ -6,6 +6,10 @@ routes = [{
     path: '/about/',
     url: './pages/about.html'
   },
+  {
+    path: '/subnabbar/',
+    url: './pages/subnabbar.html'
+  },
     {
     path: '/chip-tags/',
     url: './pages/chip-tags.html'
@@ -18,6 +22,12 @@ routes = [{
   path: '/data-table/',
     url: './pages/data-table.html'
   },
+  
+  
+    {
+  path: '/toggle/',
+    url: './pages/toggle.html'
+  },
   {
     name:'radio-button',
     path:'/radio-button/',
@@ -29,6 +39,16 @@ routes = [{
     url:'./pages/floattingactionbutton.html'
   },
   {
+    name:'stepper',
+    path:'/stepper/',
+    url:'./pages/stepper.html'
+  },
+    {
+    name:'smartSelect',
+    path:'/smartSelect/',
+    url:'./pages/smartSelect.html'
+  },
+   {
     name:'checkbox',
     path:'/checkbox/',
     url:'./pages/checkbox.html'
@@ -42,6 +62,11 @@ routes = [{
     name:'timeline',
     path:'/timeline/',
     url:'./pages/timeline.html',
+  },
+   {
+    name:'swiper',
+    path:'/swiper/',
+    url:'./pages/swiper.html',
   },
   {
     name:'calender-timeline',
@@ -73,12 +98,20 @@ routes = [{
     url:'./pages/contentBlock.html',
   },
  {
+    path: '/notification/',
+    componentUrl: './pages/notification.html',
+  },
+   {
     path: '/progessbar/',
     componentUrl: './pages/progessbar.html',
   },
    {
     path: '/photoBrowers/',
     componentUrl: './pages/photoBrowers.html',
+  },
+    {
+    path: '/sorttable/',
+    componentUrl: './pages/sorttable.html',
   },
     {
     name:'cards',
