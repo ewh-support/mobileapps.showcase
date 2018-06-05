@@ -36,6 +36,11 @@ routes = [{
     path:'/radio-button/',
     url:'./pages/radio-button.html'
   },
+   {
+    name:'tabbar',
+    path:'/tabbar/',
+    url:'./pages/tabbar.html'
+  },
     {
     name:'toolbar',
     path:'/toolbar/',
