@@ -735,3 +735,14 @@ $$('.open-toast-custom-button').on('click', function () {
 $$('.open-toast-callback').on('click', function () {
   toastWithCallback.open();
 });
+//Tool bar API
+var app = new Framework7();
+
+
+
+$$('.hide-toolbar').on('click', function () {
+  app.toolbar.hide('.toolbar');
+});
+$$('.show-toolbar').on('click', function () {
+  app.toolbar.show('.toolbar');
+});

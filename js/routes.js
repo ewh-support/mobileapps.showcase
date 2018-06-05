@@ -22,7 +22,10 @@ routes = [{
   path: '/data-table/',
     url: './pages/data-table.html'
   },
-  
+  {
+  path: '/FixedToolbar/',
+    url: './pages/FixedToolbar.html'
+  },
   
     {
   path: '/toggle/',
@@ -32,6 +35,11 @@ routes = [{
     name:'radio-button',
     path:'/radio-button/',
     url:'./pages/radio-button.html'
+  },
+    {
+    name:'toolbar',
+    path:'/toolbar/',
+    url:'./pages/toolbar.html'
   },
    {
     name:'floattingactionbutton',
@@ -172,6 +180,10 @@ routes = [{
      {
     path: '/searchbar/',
     componentUrl: './pages/searchbar.html',
+  },
+       {
+    path: '/toolbarAPI/',
+    componentUrl: './pages/toolbarAPI.html',
   },
        {
     path: '/formData/',
