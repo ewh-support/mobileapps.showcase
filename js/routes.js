@@ -115,6 +115,11 @@ routes = [{
     path:'/contentBlock/',
     url:'./pages/contentBlock.html',
   },
+   {
+    name:'ScrollableTabbar',
+    path:'/ScrollableTabbar/',
+    url:'./pages/ScrollableTabbar.html',
+  },
  {
     path: '/notification/',
     componentUrl: './pages/notification.html',
