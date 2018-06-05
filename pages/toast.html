@@ -1,26 +1,126 @@
-<div class="page" data-name="about">
-    <div class="navbar">
-      <div class="navbar-inner sliding">
-        <div class="left">
-          <a href="#" class="link back">
-            <i class="icon icon-back"></i>
-            <span class="ios-only">Back</span>
-          </a>
+<template>
+    <div class="page" data-name="toast">
+        <div class="navbar">
+            <div class="navbar-inner sliding">
+                <div class="left">
+                    <a href="#" class="link back">
+                        <i class="icon icon-back"></i>
+                        <span class="ios-only">Back</span>
+                    </a>
+                </div>
+                <div class="title">Toast</div>
+            </div>
         </div>
-        <div class="title">About</div>
-      </div>
+        <div class="page-content">
+            <div class="block">
+                <p>
+                    <a href="#" class="button button-raised open-toast-bottom">Toast on Bottom</a>
+                </p>
+                <p>
+                    <a href="#" class="button button-raised open-toast-top">Toast on Top</a>
+                </p>
+                <p>
+                    <a href="#" class="button button-raised open-toast-center">Toast on Center</a>
+                </p>
+                <p>
+                    <a href="#" class="button button-raised open-toast-icon">Toast with icon</a>
+                </p>
+                <p>
+                    <a href="#" class="button button-raised open-toast-large">Toast with large message</a>
+                </p>
+                <p>
+                    <a href="#" class="button button-raised open-toast-button">Toast with close button</a>
+                </p>
+                <p>
+                    <a href="#" class="button button-raised open-toast-custom-button">Toast with custom button</a>
+                </p>
+                <p>
+                    <a href="#" class="button button-raised open-toast-callback">Toast with callback on close</a>
+                </p>
+            </div>
+        </div>
     </div>
-    <div class="page-content">
-      <div class="block-title">About My App</div>
-      <div class="block block-strong">
-        <p>Fugiat perspiciatis excepturi, soluta quod non ullam deleniti. Nobis sint nemo consequuntur, fugiat. Eius perferendis animi autem incidunt vel quod tenetur nostrum, voluptate omnis quasi quidem illum consequuntur, a, quisquam.</p>
-        <p>Laudantium neque magnam vitae nemo quam commodi, in cum dolore obcaecati laborum, excepturi harum, optio qui, consequuntur? Obcaecati dolor sequi nesciunt culpa quia perspiciatis, reiciendis ex debitis, ut tenetur alias.</p>
-      </div>
-      <div class="block">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestiae laudantium dignissimos est nobis delectus nemo ea alias voluptatum architecto, amet similique, saepe iste consectetur in repellat ut minus quibusdam!</p>
-        <p>Molestias et distinctio porro nesciunt ratione similique, magni doloribus, rerum nobis, aliquam quae reiciendis quasi modi. Nam a recusandae, fugiat in ea voluptates fuga eius, velit corrupti reprehenderit dignissimos consequatur!</p>
-        <p>Blanditiis, cumque quo adipisci. Molestiae, dolores dolorum quos doloremque ipsa ullam eligendi commodi deserunt doloribus inventore magni? Ea mollitia veniam nostrum nihil, iusto doloribus a at! Ea molestiae ullam delectus!</p>
-      </div>
-    
-    </div>
-  </div>
+</template>
+<script>
+    var app = new Framework7();
+
+    var $$ = Dom7;
+
+    // Create bottom toast
+    var toastBottom = app.toast.create({
+        text: 'This is default bottom positioned toast',
+        closeTimeout: 2000,
+    });
+    // Create top toast
+    var toastTop = app.toast.create({
+        text: 'Top positioned toast',
+        position: 'top',
+        closeTimeout: 2000,
+    });
+    // Create center toast
+    var toastCenter = app.toast.create({
+        text: 'I\'m on center',
+        position: 'center',
+        closeTimeout: 2000,
+    });
+    // Create toast with icon
+    var toastIcon = app.toast.create({
+        icon: app.theme === 'ios' ? '<i class="f7-icons">star</i>' : '<i class="material-icons">star</i>',
+        text: 'I\'m with icon',
+        position: 'center',
+        closeTimeout: 2000,
+    });
+    // Create toast with large message
+    var toastLargeMessage = app.toast.create({
+        text: 'This toast contains a lot of text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quae, ab. Delectus amet optio facere autem sapiente quisquam beatae culpa dolore.',
+        closeTimeout: 2000,
+    });
+    // Create toast with button
+    var toastWithButton = app.toast.create({
+        text: 'Toast with additional close button',
+        closeButton: true,
+    });
+    // Create toast with custom button text
+    var toastWithCustomButton = app.toast.create({
+        text: 'Custom close button',
+        closeButton: true,
+        closeButtonText: 'Close Me',
+        closeButtonColor: 'red',
+    });
+    // Create toast with callback on close
+    var toastWithCallback = app.toast.create({
+        text: 'Callback on close',
+        closeButton: true,
+        on: {
+            close: function () {
+                app.dialog.alert('Toast closed');
+            },
+        }
+    });
+
+    // Open toasts
+    $$('.open-toast-bottom').on('click', function () {
+        toastBottom.open();
+    });
+    $$('.open-toast-top').on('click', function () {
+        toastTop.open();
+    });
+    $$('.open-toast-center').on('click', function () {
+        toastCenter.open();
+    });
+    $$('.open-toast-icon').on('click', function () {
+        toastIcon.open();
+    });
+    $$('.open-toast-large').on('click', function () {
+        toastLargeMessage.open();
+    });
+    $$('.open-toast-button').on('click', function () {
+        toastWithButton.open();
+    });
+    $$('.open-toast-custom-button').on('click', function () {
+        toastWithCustomButton.open();
+    });
+    $$('.open-toast-callback').on('click', function () {
+        toastWithCallback.open();
+    });
+</script>

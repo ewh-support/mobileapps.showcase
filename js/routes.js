@@ -106,6 +106,10 @@ routes = [{
     componentUrl: './pages/progessbar.html',
   },
    {
+    path: '/toast/',
+    componentUrl: './pages/toast.html',
+  },
+   {
     path: '/photoBrowers/',
     componentUrl: './pages/photoBrowers.html',
   },
