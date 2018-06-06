@@ -42,6 +42,10 @@ routes = [{
   url: './pages/three.html'
 },
 {
+  path: '/history/',
+  url: './pages/history.html'
+},
+{
   path: '/map/',
   url: './pages/map.html',
   on: {
