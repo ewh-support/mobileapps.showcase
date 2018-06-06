@@ -30,8 +30,16 @@ routes = [{
   url: './pages/dashboard.html'
 },
 {
+  path: '/one/',
+  url: './pages/one.html'
+},
+{
   path: '/two/',
   url: './pages/two.html'
+},
+{
+  path: '/three/',
+  url: './pages/three.html'
 },
 {
   path: '/map/',

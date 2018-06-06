@@ -42,7 +42,9 @@
           <div class="page-content">
             <div class="block">
               <!--vừa đóng menu vừa chuyển trang, panel-close -->
-              <p> <a href="/profiles" class="panel-close">Thông tin cá nhân</a> </p>
+              <p>
+                <a href="/profiles" class="panel-close">Thông tin cá nhân</a>
+              </p>
               <p>
                 <a class="panel-close" href="#">Đóng</a>
               </p>
@@ -74,15 +76,12 @@
         <div class="toolbar-inner">
           <a href="/dashboard/" class="tab-link tab-link-active">
             <i class="icon f7-icons ios-only">home
-              <span class="badge color-green">5</span>
             </i>
             <i class="icon f7-icons ios-only icon-ios-fill">home_fill
-              <span class="badge color-green">5</span>
             </i>
             <i class="icon material-icons md-only">home
-              <span class="badge color-green">5</span>
             </i>
-            <span class="tabbar-label">Home</span>
+            <span class="tabbar-label">Chức Năng</span>
           </a>
           <!-- <a href="#view-catalog" class="tab-link">
             <i class="icon f7-icons ios-only">list</i>
@@ -114,52 +113,52 @@
       <div id="view-home" class="view view-main tab tab-active">
         <!-- Page, data-name contains page name which can be used in page callbacks -->
         <div class="page" data-name="startup">
-            <div class="navbar">
-              <div class="navbar-inner sliding">
-                <div class="title">Gỗ Trường Thành</div>
-              </div>
-            </div>
-            <div class="page-content">
-              <div class="list inline-labels no-hairlines-md">
-                <ul>
-                  <li class="item-content item-input">
-                    <div class="item-inner">
-                      <div class="item-title item-label">Ngày CT/
-                        <br> Ngày về kho</div>
-                      <div class="item-input-wrap">
-                        <input type="date" value="2018-04-30" placeholder="Please choose...">
-                      </div>
-                    </div>
-                  </li>
-                  <li class="item-content item-input">
-                    <div class="item-inner">
-                      <div class="item-title item-label">Ngày
-                        <br>Giao Dịch</div>
-                      <div class="item-input-wrap">
-                        <input type="date" value="2018-05-30" placeholder="Please choose...">
-                      </div>
-                    </div>
-                  </li>
-                  <li class="item-content item-input">
-                    <div class="item-inner">
-                      <div class="item-title item-label">Kho
-                        <br>Giao Dịch</div>
-                      <div class="item-input-wrap">
-                        <input type="text" placeholder="">
-                        <span class="input-clear-button"></span>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="block">
-                <p class="row">
-                  <button class="col button button-big button-fill login-screen-open" data-login-screen="#my-login-screen">Đăng Nhập</button>
-                  <button class="col button button-big ">Thoát</button>
-                </p>
-              </div>
+          <div class="navbar">
+            <div class="navbar-inner sliding">
+              <div class="title">Gỗ Trường Thành</div>
             </div>
           </div>
+          <div class="page-content">
+            <div class="list inline-labels no-hairlines-md">
+              <ul>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Ngày CT/
+                      <br> Ngày về kho</div>
+                    <div class="item-input-wrap">
+                      <input type="date" value="" placeholder="dd/mm/yyyy">
+                    </div>
+                  </div>
+                </li>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Ngày
+                      <br>Giao Dịch</div>
+                    <div class="item-input-wrap">
+                      <input type="date" value="" placeholder="dd/mm/yyyy">
+                    </div>
+                  </div>
+                </li>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Kho
+                      <br>Giao Dịch</div>
+                    <div class="item-input-wrap">
+                      <input type="text" placeholder="">
+                      <span class="input-clear-button"></span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="block">
+              <p class="row">
+                <button class="col button button-big button-fill login-screen-open" data-login-screen="#my-login-screen">Đăng Nhập</button>
+                <button class="col button button-big ">Thoát</button>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Catalog View -->
@@ -226,7 +225,7 @@
                   <button class="button button-fill login-button">Đăng Nhập </button>
                 </div>
                 <div class="col-50">
-                  <button class="button login-screen-close" >Thoát</button>
+                  <button class="button login-screen-close">Thoát</button>
                 </div>
               </div>
             </div>

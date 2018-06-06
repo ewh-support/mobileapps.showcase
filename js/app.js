@@ -101,7 +101,10 @@ $$('#my-signup-screen .signup-button').on('click', function () {
 $$('#my-login-screen .login-button').on('click', function () {
   var username = $$('#my-login-screen [name="username"]').val();
   var password = $$('#my-login-screen [name="password"]').val();
-  app.router.load('/dashboard/')
+  //app.router.load('/dashboard/')
+
+  localStorage.isAuthenticated = 'true'; //là string, ko phải bool
+  app.loginScreen.close('#my-login-screen');
   //easyweb
   //login();
 
