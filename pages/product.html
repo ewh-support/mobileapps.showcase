@@ -23,6 +23,7 @@
   return {
     data: function () {
       var productId = this.$route.params.id;
+      console.log('productid');
       var currentProduct;
       this.$root.products.forEach(function (product) {
         if (product.id === productId) {

@@ -78,5 +78,38 @@
   </div>
 </template>
 <script>
-  return {}
+  return {
+    on: {  //tham khảo https://framework7.io/docs/routes.html#route-events
+      pageAfterIn: function (e, page) {
+        // do something after page gets into the view
+      },
+      pageBeforeIn: function(e, page) {
+        console.log('pageBeforeIn', page);
+      },
+      pageInit: function (e, page) {
+        console.log('do something when page initialized')   // do something when page initialized
+        $$('.convert-form-to-data').on('click', function(){
+          var formData = app.form.convertToData('#my-profile');
+
+          //easyweb gọi api để cập nhật dữ liệu, lưu ở formData
+          console.log(JSON.stringify(formData));
+          axios.patch('/Users/' + formData.id, formData)
+          .then(function(response) {
+            console.log('cập nhật thành công')
+          })
+          .catch(function(error) {
+
+          })
+        });
+
+        $$('.fill-form-from-data').on('click', function(){
+          var oldData = app.form.convertToData('#my-profile');
+          console.log('object id', oldData.id);
+
+          var formData = {} ; //axios.get()
+          app.form.fillFromData('#my-form', formData);
+        });
+      },
+    }
+  }
 </script>
